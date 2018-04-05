@@ -1,3 +1,5 @@
+'use strict';
+
 export function Node(data) {
   this.data = data;
   this.children = [];
@@ -111,7 +113,7 @@ export class Tree {
     let string = '';
     while(queue.length) {
       const node = queue.shift();
-      string += `${node.data.toString()} `;
+      string += `${node.data.toString()}`;
       if(node === newline && queue.length) {
         queue.push(newline);
       }
